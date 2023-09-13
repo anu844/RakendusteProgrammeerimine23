@@ -64,6 +64,11 @@ const numberArray = [1,2,3,4,5]
 //const newArray = [6, 7, 8, 0, 10]
 console.log(numberArray)
 
-const newArray = numberArray.map((n) => n + 5)
+const newArray = numberArray.map((element) => element + 5) 
 // -map(()=> {})        (märk "=>" tähendab arrow-funktsiooni)
 console.log(newArray)
+//--------------------------------------------
+const newArray2 = numberArray.map((element, index, array) => {
+    return element + 5
+})
+console.log(newArray2)
