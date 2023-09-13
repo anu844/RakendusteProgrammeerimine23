@@ -66,9 +66,77 @@ console.log(numberArray)
 
 const newArray = numberArray.map((element) => element + 5) 
 // -map(()=> {})        (märk "=>" tähendab arrow-funktsiooni)
-console.log(newArray)
+//console.log(newArray)
 //--------------------------------------------
 const newArray2 = numberArray.map((element, index, array) => {
     return element + 5
 })
 console.log(newArray2)
+//--------------------------------------------
+// {key:value}
+// value => "value":value
+// objekt koosneb alati key value paaridest
+const newArray3 = numberArray.map((element, index, array) => {
+    console.log({element, newElement: element +5, index, array})
+
+    return element + 5
+})
+// ülaloleva lihtsustatud visuaal
+const newArray4 = numberArray.map((element, index, array) => {
+    console.log({
+        element: element, 
+        newElement: element +5, 
+        "index": index, 
+        array
+    })
+
+    return element + 5
+})
+
+//Filter
+const filteredArray = numberArray.filter(element => element < 4)
+
+console.log({numberArray, filteredArray}) //<- seal sulgudes loogelised sulud on sp, et terminalis väljastades eristada seda rida.
+
+console.log(1<4) // näeme, et väljastab kas "true" või "false", ehk siis filteredArray reas pannakse arraysse numbrid, mis on "true"-d
+
+const names = ['Juku', 'Mari', 'Jaan', 'Anni']
+// const data = ...
+//const data = names.map(name => ({name: ...}))
+const data = names.map(name =>{
+    return {
+        name: name,
+        age: name.length + 20, // 20 + nime pikkus
+        email: name.toLowerCase() + '@company.com', // nimi väikesteks tähtedeks + emaili lõpp
+        username: name.split("").reverse().join("") // name.split - tükeldab nime; reverse - keerab tähed vastastikku järjekorda; join - ühendab vastastikku tõstetud tähed omavahel
+    }
+})
+console.log({data})
+
+//{
+//    name: 'Anni', 
+//    age: 24,
+//    email: 'anni@company.com',
+//    aadress: 'Anni Street 55'
+//    username: 'innA'
+//}
+
+// Tahan lisada Jukule pikkuse juurde
+console.log(data[0]) // originaalsed andmed
+const newJuku = {
+    ...data[0], // need kolm punkti on spread syntax, mis jätab alles originaalsed andmed
+    height: 175
+}
+console.log({newJuku})
+
+// teine variant:
+//oldJuku = data[0]
+//const newJuku2 = {
+//    ...oldJuku
+//}
+
+const evenNewerJuku= {
+    ...data[0],
+    age: 99
+}
+console.log({newJuku, evenNewerJuku})
