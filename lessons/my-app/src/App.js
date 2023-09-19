@@ -1,30 +1,24 @@
 
 import './App.css';
-import React, { useState } from 'react';
+
 
 function App() {
-  const initialHobbies = ['Muusika kuulamine', 'Heegeldamine', 'Taimede kasvatamine', 'Looduses jalutamine', 'Lugemine', 'Joonistamine', 'Puslede kokkupanemine', 'Koeraga mängimine', 'Ristsõnade lahendamine', 'Netflixi vaatamine', 'Kingituste tegemine', 'Küpsetamine'];
-
-  // Kasuta useState'i, et luua dünaamiline nimekiri hobidest
-  const [hobbies, setHobbies] = useState(initialHobbies);
-
+  
   return (
     
     <div className="App">
       <header className="App-header">
         <h1>Anu Sarapuu</h1>
         <a className="allajoonitud">
-          Minu hobid:
+          MINU HOBID
         </a>
-        <ul>
-          {hobbies.map((hobi, index) => (
-            <li key={index}>{hobi}</li>
-          ))}
-        </ul>
-      
-        <p>
-          
-        </p>
+        
+        <table cellspacing="10" cellpadding = "10">
+          <tr>
+          <td style={{ textAlign: 'left' }}>► Muusika kuulamine <br /> ► Heegeldamine <br /> ► Taimede kasvatamine <br /> ► Looduses jalutamine <br />► Lugemine <br />► Joonistamine</td>
+          <td style={{ textAlign: 'left' }}>► Puslede kokkupanemine <br />► Koeraga mängimine <br /> ► Ristsõnade lahendamine <br />► Netflixi vaatamine <br />► Kingituste tegemine <br />► Küpsetamine</td>
+          </tr>
+        </table>
         
       </header>
     </div>
