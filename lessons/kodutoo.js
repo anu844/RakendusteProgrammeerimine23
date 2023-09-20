@@ -1,3 +1,13 @@
+// == - kontrollib väärtust
+// === - kontrollib samas andmetüübis väärtust, kui andmetüüp erinev, kohe false
+//console.log(1 == '1') true
+//console.log (1==='1') false
+
+//String to number
+// let actuallyANumber = '1'
+// console.log(parseInt(actuallyANumber)) // <-- kõige lollikindlam viis teha string numbriks
+// console.log(+actuallyANumber) // <-- + märk muutuja ees muudab stringi numbriks
+
 // == <- EQUALITY
 // == on true kui mõlema poole objektid on samad
 // string - true kui mõlemal poolel on samad trükimärgid samas järjekorras
@@ -57,6 +67,7 @@
 
 // Async - kasutatakse sündmustepõhiste operatsioonide või aeganõudvate ülesannete juhtimiseks veebirakendustes.
 // Kasutatakse olukordades, kus tegevused võivad võtta aega ja ei soovi, et need tegevused blokeeriksid veebilehe kasutajaliidest.
+// syncronys - Ootab senikaua kuni funktsioon on lõpule viidud
 
 // Callbacks - vanim viis asünkroonseid ülesandeid käsitada.
 // Funktsioonid edastatakse teisele funktsioonile ja kutsutakse hiljem tagasi, kui esimene ülesanne on lõpetatud.
@@ -76,6 +87,11 @@ function tegevusAsünkroonne1(callback) {
   
 // Promise - objekt, mis esindab tulevast väärtust või veateadet. 
 // Pakub selget viisi asünkroonse tegevuse tulemuste haldamiseks.
+
+// Promise - pmst lubab midagi, 3 state-i
+// Kasutada siis, kui 
+
+// Promise All - ootab kõik enne edasiminemist ära
 
   function tegevusAsünkroonne2() {
     return new Promise(function(resolve, reject) {
